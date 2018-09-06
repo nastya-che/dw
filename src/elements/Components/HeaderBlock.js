@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import headerBg from '../styles/img/header_bg.jpg';
 import grayArrow from '../styles/img/grayArrow.png';
+
+import Inst from '../styles/img/010-instagram.svg';
+import Call from '../styles/img/009-phone-call.svg';
+import FB from '../styles/img/facebook-logo-outline.svg';
 require('animate.css');
 
 class HeaderBlock extends Component{
@@ -86,7 +90,8 @@ class HeaderBlock extends Component{
     render(){
 
         return(
-            <div className={'header_block'}>
+            <div className={'header_block'}
+                 id={'home'}>
 
                 <div className={'line'} style={{bottom: this.state.botP, transition: '.4s linear'}}>
                     <div className={'red_line'} style={{ height: this.state.lHeight, transition: '.4s linear'}}></div>
@@ -160,6 +165,33 @@ class HeaderBlock extends Component{
                         <div className={'down_btn_wrapper'}></div>
                     </button>
                 </div>
+
+
+
+                <div className={'contacts_header'}>
+
+                    <a href="tel:+38(048)770-09-29"
+                       className={'contacts_red'}
+                       target="_blank">
+                        <img src={Call} alt={'Позвонить'} />
+                        <span>+38 (048) 770-09-29</span>
+                    </a>
+
+                    <a href={'https://www.instagram.com/wecandowebcom/'}
+                        className={'contacts_gray'}
+                       target="_blank">
+                        <img src={Inst} alt={'Instagram'} />
+                        <span>We can do web</span>
+                    </a>
+
+                    <a href={'https://www.facebook.com/wecandoweb/'}
+                       className={'contacts_gray'}
+                       target="_blank">
+                        <img src={FB} alt={'FaceBook'} />
+                        <span>We can do web</span>
+                    </a>
+                </div>
+
             </div>
 
         )

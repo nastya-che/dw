@@ -27,7 +27,8 @@ class GalleryBlock extends Component{
         }
 
         return(
-            <div className={'gallery_block'}>
+            <div className={'gallery_block'}
+                 id={'gallery'}>
                 <div className={'gallery_bg'}></div>
                 <p className={'gallery_title'}><span>P</span>ortfolio</p>
                 <div class="grid-container">

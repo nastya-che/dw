@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class LeftMenuItem extends Component{
 
     constructor(){
-        super();
+        super();[]
         this.state = {
             activeItemIndex: 0,
             menuItemLeft: '-50px',
@@ -13,6 +13,15 @@ class LeftMenuItem extends Component{
 
 
     onClickItem(){
+        let menuItems = document.getElementsByClassName('menu_item'),
+            activeClass = 'active_item';
+
+        for(let i = 0; i < menuItems.length; i++){
+            let item = menuItems[i];
+            item.classList.contains(activeClass) && item.classList.remove(activeClass);
+        }
+
+        this.menuItem.classList.add(activeClass);
 
     }
 
@@ -20,7 +29,7 @@ class LeftMenuItem extends Component{
         let activeClass = 'active_item';
         this.props.itemIndex === 0 && this.menuItem.classList.add(activeClass);
 
-        var timeDelay = 2800 + this.props.itemIndex * 150;
+        let timeDelay = 2800 + this.props.itemIndex * 150;
 
 
         setTimeout(function() { this.setState({menuItemLeftAct: '0px'}); }.bind(this), timeDelay);
@@ -36,7 +45,11 @@ class LeftMenuItem extends Component{
         var activeIndex = this.state.activeItemIndex;
 
         return(
-            <div className={'menu_item'} onClick={this.onClickItem.bind(this)} ref={el => this.menuItem = el}  >
+            <a className={'menu_item'}
+               onClick={this.onClickItem.bind(this)}
+               ref={el => this.menuItem = el}
+               href={d.anchor}
+            >
                 <div className={'menu_item_content'}
                      style={{
                          left: activeIndex === this.props.itemIndex ? this.state.menuItemLeftAct : this.state.menuItemLeft
@@ -50,7 +63,7 @@ class LeftMenuItem extends Component{
                         {this.props.itemData.itemName}
                     </div>
                 </div>
-            </div>
+            </a>
         )
     }
 }
