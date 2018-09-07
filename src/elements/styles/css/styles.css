@@ -469,6 +469,7 @@ span.red_text{
     padding-bottom: 20px;
     margin: 0px;
     color: #c5c5c5;
+    text-align: center;
 }
 
 .gallery_title span, .process_title span, .contact_title span{
@@ -737,6 +738,8 @@ span.red_text{
 
 
 
+
+
 /* CONTACT BLOCK STYLES */
 
 .contact_block{
@@ -752,12 +755,13 @@ span.red_text{
 
 .contact_content{
     width: 90%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: auto;
     flex: 1;
+    align-self: flex-end;
 }
 
 .cont_form{
@@ -793,8 +797,8 @@ span.red_text{
 }
 
 .form_content{
-    margin-left: 100px;
-    margin-top: 50px;
+    /*margin-left: 100px;*/
+    /*margin-top: 50px;*/
 }
 
 .form_tabs{
@@ -879,3 +883,100 @@ span.red_text{
     transition: .2s linear;
 }
 
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.contact-info > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 15px 0px;
+    /*background: rgba(0,0,0,0.2);*/
+    background-color: rgba(240, 56, 41, 0.15);
+}
+
+.contact-info > div span:first-of-type{
+    width: 100px;
+    text-align: left;
+    font-family: Rounded;
+    color: #c5c5c5;
+    font-weight: 600;
+    align-self: flex-start;
+    margin: 20px 0px;
+}
+
+.contact-info > div span:last-of-type{
+    display: flex;
+    flex-direction: column;
+    color: #c5c5c5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    align-self: flex-end;
+    margin: 20px 0px;
+}
+
+
+
+.border-figure{
+    position: absolute;
+}
+
+.border-one{
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #f03829;
+    border-bottom: none;
+    border-right: none;
+}
+
+.border-two{
+    right: 0px;
+    bottom: 0px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c5c5c5;
+    border-top: none;
+    border-left: none;
+}
+
+.cont-phone{
+    width: 320px;
+    height: 100px;
+}
+
+.cont-address{
+    width: 380px;
+    height: 80px;
+}
+
+.cont-email{
+    width: 350px;
+    height: 80px;
+}
+
+
+.cont-phone a, .cont-email a{
+    color: #c5c5c5;
+}
+
+
+
+
+
+
+/* FOOTER BLOCK STYLES */
+
+.footer-block{
+    height: 60px;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+}

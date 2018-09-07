@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ContactFromTabs from './ContactFromTabs';
+import FooterBlock from "./FooterBlock";
 
 
 
@@ -33,16 +34,16 @@ class ContactBlock extends Component{
 
         return(
             <div className={'contact_block'}
-            id={'contacts'}>
+                 id={'contacts'}>
                 <h3 className={'contact_title'}><span>C</span>ontacts</h3>
 
                 <div className={'contact_content'}>
                     <div className={'form_content'}>
 
                         {/*<div className={'form_tabs'}>*/}
-                            {/*<a className={'form_tab active'}><span className={'line line1'}></span>Email</a>*/}
-                            {/*<a className={'form_tab'}>Phone</a>*/}
-                            {/*<a className={'form_tab'}>Skype</a>*/}
+                        {/*<a className={'form_tab active'}><span className={'line line1'}></span>Email</a>*/}
+                        {/*<a className={'form_tab'}>Phone</a>*/}
+                        {/*<a className={'form_tab'}>Skype</a>*/}
                         {/*</div>*/}
 
                         <ContactFromTabs onTabClick={this.onTabClick.bind(this)} />
@@ -64,16 +65,37 @@ class ContactBlock extends Component{
                             <button className={'form_btn'}>Send application</button>
                         </div>
                     </div>
+
+
+                    <div className={'contact-info'}>
+                        <div className={'cont-phone'}>
+                            <div className={'border-one border-figure'}></div>
+                            <div className={'border-two border-figure'}></div>
+                            <span>Телефон: </span>
+                            <span>
+                                <a href={'tel:+38(048)770-09-29'}>+38 (048) 770-09-29</a>
+                                <a href={'tel:+38(094)995-49-27'}>+38 (094) 995-49-27</a>
+
+                            </span>
+                        </div>
+                        <div className={'cont-address'}>
+                            <div className={'border-one border-figure'}></div>
+                            <div className={'border-two border-figure'}></div>
+                            <span>Адрес:</span>
+                            <span>Одесса ул.Водопроводная 10</span>
+                        </div>
+                        <div className={'cont-email'}>
+                            <div className={'border-one border-figure'}></div>
+                            <div className={'border-two border-figure'}></div>
+                            <span>E-mail:</span>
+                            <span><a href={'mailto:info@wecandoweb.com'}>info@wecandoweb.com</a></span>
+                        </div>
+                    </div>
+
+
                 </div>
 
-                {/*<div className={'call_form'}>*/}
-                    {/*<div className={'call_form_wrapper'}>*/}
-                        {/*<input type={'text'} placeholder={'Your name'} name={'cont_name'} />*/}
-                        {/*<input type={'tel'} placeholder={'Phone number'} name={'cont_tel'} />*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-
-                <div className={'contact-info'}></div>
+                <FooterBlock />
 
             </div>
         )
